@@ -12,7 +12,7 @@ app.use(cors());
 app.use(express.json());
 
 // Connect to MongoDB
-await connectDB();
+// await connectDB();
 
 app.get("/", getUsers);
 

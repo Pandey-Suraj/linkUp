@@ -3,12 +3,12 @@
 import React, { useState } from 'react';       
 
 export function Sidebar() {
-    const [isCollapsed, setIsCollapsed] = useState(true);
+    const [isCollapsed, setIsCollapsed] = useState(false);
 
     console.log(isCollapsed)
 
     return (
-        <div className={`m-2 border-2 border-gray-200 rounded-lg transition-all duration-300 h-[98vh] ${isCollapsed ? 'w-[4rem]' : 'w-[16rem]'}`}>
+        <div className={` border-r-1 border-gray-200 transition-all duration-300 ${isCollapsed ? 'w-[4rem]' : 'w-[16rem]'}`}>
             <div className="p-4 flex justify-between items-center">
                 <h1 className={`font-bold ${isCollapsed ? 'hidden' : 'block'}`}>Sidebar</h1>
                 <button 
@@ -20,7 +20,7 @@ export function Sidebar() {
             </div>
             <div className="border-b border-gray-200 my-2"></div>
             <div className="p-4">
-                <h2 className={`whitespace-nowrap text-sm font-semibold text-gray-500 mb-4 ${isCollapsed ? 'hidden' : 'block'}`}>MAIN MENU</h2>
+                <h2 className={`whitespace-nowrap text-sm font-semibold text-gray-500 mb-4 ${isCollapsed ? 'hidden' : 'block'}`}>Chat</h2>
                 <div className="space-y-2">
                     <div className="flex items-center space-x-2 hover:bg-gray-100 p-2 rounded cursor-pointer h-[30px]">
                         <i className="pi pi-clock"></i>
